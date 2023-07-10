@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Alina Efremova</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Alina Efremova</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="SQL.html">SQL</a></li>
+								<li><a href="Spreadsheets.html">Spreadsheets</a></li>
+								<li><a href="Tableau.html">Tableau</a></li>
+								<li><a href="Python.html">Python</a></li>
+                                <li><a href="About.html">About me</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<section id="menu">
+					<!-- Links -->
+						<section>
+							<ul class="links">
+								<li><a href="SQL.html"><h3>SQL</h3></a></li>
+								<li><a href="Spreadsheets.html"><h3>Spreadsheets</h3></a></li>
+								<li><a href="Tableau.html"><h3>Tableau</h3></a></li>
+								<li><a href="Python.html"><h3>Python</h3></a></li>
+								<li><a href="About.html"><h3>About</h3></a></li>
+							</ul>
+						</section>
+				</section>
+
+			<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title" style="background-image: url(images/pic13.jpg); background-size: cover">
+										<h2><a href="#">Spreadsheets</a></h2>
+									</div>
+								</header>
+								<!-- TOC -->
+								<div id="toc_container">
+									<p class="toc_title">Contents</p>
+									<ul class="toc_list">
+										<li><a href="#Brief_description">Brief experience description</a>
+										<ul>
+											<li><a href="#Used_commands">Used commands and structures</a></li>
+											<li><a href="#Events">Events dataset</a></li>
+											<li><a href="#Population_Rent">Population and rent increase datasets</a></li>
+										</ul>
+									</li>
+									</ul>
+									</div>
+								<!-- TOC -->
+								<h2 id="Brief_description">Brief experience description</h2>
+								<p align="justify">
+										I gained experience with spreadsheets in various aspects. During work, they were used for quick analysis of a queried sample. I also operated spreadsheets in everyday life and for study projects in universities. Below one can find two examples of processing open-source datasets showing the skills I have. The first one was focused on pivot tables and generalized statistics, while the second was on interactivity and information representation. The examples were created with Google Spreadsheets to make it easier to embed, but I have Excel experience to the same extent.
+								</p>
+								<hr id="Used_commands">
+								<p style="font-size:1.25em; ">
+									<b>In retrospect, I used the following commands and structures at various times</b>
+									<br>
+									<mark>&nbsp;Pivot table&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;Charts&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;Data validation&nbsp;</mark>&nbsp; 
+									&nbsp;<mark>&nbsp;Conditional formating&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;SORT&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;FILTER&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;Slicer&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;SPARKLINE&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;VLOOKUP&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;IF/IFS/IFERROR&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;COUNTIF/SUMIF&nbsp;</mark>&nbsp; 
+									&nbsp;<mark>&nbsp;SUM/COUNT/AVERAGE/MAX/MIN&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;ARRAYFORMULA&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;ROUND&nbsp;</mark>&nbsp; 
+									&nbsp;<mark>&nbsp;RANK&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;SPLIT/CONCATENATE/JOIN&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;LEFT/RIGHT/LEN/TRIM&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;VALUE&nbsp;</mark>&nbsp; 
+									&nbsp;<mark>&nbsp;SUBSTITUTE&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;REGEXMATCH&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;TODAY/NOW/YEAR/MONTH/DAY&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;QUERY&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;TRANSPOSE&nbsp;</mark>
+								</p>
+								<hr id="Events">
+								<h3><em>Events dataset exemplification</em></h3>
+								<p align="justify">
+										The data processed within the spreadsheet was queried from <b><a href="https://console.cloud.google.com/marketplace/product/the-gdelt-project/gdelt-2-events">GDELT 2.0 Event Database</a></b> (see SQL query <a href="SQL.html#eventsQuery">here</a>). It has parsed and collected actions from different sources across the world. In particular, each event has a unique identifier, information about the active actor and the actor on which the action was performed, including affiliated countries. Events are classified with CAMEO action codes, that have three-level taxonomy, where the highest one consists of 20 types of events. The tone of the event is described from negative to positive in the range of (-100; +100), besides one can find the number of mentions of this event in all source documents. Also, there are such attributes as the date and location of the event, as well as the source reporting it. 
+								</p>
+								<p align="justify">
+										The spreadsheet was created to show aggregated information about types of events, their tones, and activities of countries for the last 15 years. It is accessible via this <a href="https://docs.google.com/spreadsheets/d/16O_RfPDhW-1MAPVA6yQ-MqokpLFAPZASgsElHSloFeY/edit?usp=sharing">link</a>. There one can find two pivot tables - 'Countries' and 'Events' - that are also displayed below. Each one of them has a note about the content. The 'Events' table reveals the actions categories shares, average tones, and their change through the years. The 'Countries' table is focused on the contributions of countries in the number of events, as well as their directions and tones. The sheets with source data and additional calculations were not hidden and are also visible for inspection.
+								</p>
+								<p align="justify">
+										<iframe 
+										src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZcHSwg0pz_LJY9m-9W5L2q0d7deCY41zwTtMkcThw7J-B2iEc7isvVDUaC-zgfRaohz7IbbkXq5uA/pubhtml?gid=2090351443&amp;single=true&amp;widget=true&amp;headers=false"
+										width="100%" height="350">
+										</iframe>
+										<iframe 
+										src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZcHSwg0pz_LJY9m-9W5L2q0d7deCY41zwTtMkcThw7J-B2iEc7isvVDUaC-zgfRaohz7IbbkXq5uA/pubhtml?gid=778524839&amp;single=true&amp;widget=true&amp;headers=false"
+										width="100%" height="350">
+									    </iframe>
+								</p>
+								<h3 id="Population_Rent"><em>Population and rent increase datasets exemplification</em></h3>
+								<p align="justify">
+										The data for this spreadsheet was downloaded from two datasets on the CBS StatLine data portal. The <a href="https://opendata.cbs.nl/statline/portal.html?_la=en&amp;_catalog=CBS&amp;tableId=37259eng&amp;_theme=1135">population dynamics table</a> describes population growth in The Netherlands by birth, death, and migration by sex and region. And the <a href="https://opendata.cbs.nl/statline/portal.html?_la=en&amp;_catalog=CBS&amp;tableId=83162ENG&amp;_theme=1136">rent dataset</a> includes figures on the average rent increase of dwellings broken down by part of the country, province, and the four major municipalities.
+									</p>
+								<p align="justify">
+										The interactive 'BOARD' spreadsheet created based on this information is meant for the representation of aggregated data across the country and particularly metrics within provinces since 2015. It is possible to choose a province for detailed data on changes in population and rent. The static version is embedded below, and the interactive one is accessible via this <a href="https://docs.google.com/spreadsheets/d/1nHGpGCdxMbVqEraJTOeW9nG5H8m90BcgOMBqaf7z_-A/edit?usp=sharing">link</a>.
+									</p>	
+								<p align="justify">
+										<iframe 
+										src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSLlwbw0P-sY_zHwKuV8CYkqwVFQLnozVKeaYAAEDipHSkayEvsg4kbMSAqDZIKF2OK4eqH7TzlNIoy/pubhtml?gid=1123576551&amp;single=true&amp;widget=true&amp;headers=false"
+										width="100%" height="500">
+										</iframe>
+								</p>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="mailto:thealinaefremova@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

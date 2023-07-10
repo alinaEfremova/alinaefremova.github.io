@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Alina Efremova</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Alina Efremova</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="SQL.html">SQL</a></li>
+								<li><a href="Spreadsheets.html">Spreadsheets</a></li>
+								<li><a href="Tableau.html">Tableau</a></li>
+								<li><a href="Python.html">Python</a></li>
+                                <li><a href="About.html">About me</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<section id="menu">
+					<!-- Links -->
+						<section>
+							<ul class="links">
+								<li><a href="SQL.html"><h3>SQL</h3></a></li>
+								<li><a href="Spreadsheets.html"><h3>Spreadsheets</h3></a></li>
+								<li><a href="Tableau.html"><h3>Tableau</h3></a></li>
+								<li><a href="Python.html"><h3>Python</h3></a></li>
+								<li><a href="About.html"><h3>About</h3></a></li>
+							</ul>
+						</section>
+				</section>
+
+			<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title" style="background-image: url(images/pic13.jpg); background-size: cover">
+										<h2><a href="#">SQL</a></h2>
+									</div>
+								</header>
+								<!-- TOC -->
+								<div id="toc_container">
+									<p class="toc_title">Contents</p>
+									<ul class="toc_list">
+										<li><a href="#Work_experience">Work experience</a>
+										<ul>
+											<li><a href="#Used_commands">Used commands and structures</a></li>
+										</ul>
+									</li>
+									<li><a href="#Big_query">Big query</a></li>
+									<li><a href="#Uni_project">University project</a></li>
+									</ul>
+									</div>
+								<!-- TOC -->	
+								<h2 id="Work_experience">Work experience</h2>
+								<p align="justify">
+									I was working as a QA engineer in a Big Data team that was collecting inner information about the usage of RingCentral products. The ETLs I was working with aggregated and enriched information from different sources to make it accessible via Hive or Impala.
+								</p>
+								<p>
+									<center><img src="images/ETLs.png" width="55%"></center>
+								</p>
+								<p align="justify">
+									During my work, I used to write SQL queries for end-to-end tests as well as verified queries heavy-loaded with JOIN, grouping, and filtering. Also, was responsible for managing the database at the stage environment so that it is aligned with production and can be used for testing. Which gave me a lot of experience with Data Definition and Data Management Languages.
+								</p>
+								<p align="justify">
+									Besides data checks, SQL was at use for automation test results monitoring. For instance, I created a procedure and function to go through all ETL test results tables and choose tests the result of which has changed. The test result could have been either a pass or a fail. And in some cases, we were interested if the test that was failing now is passing and vice versa. The results of such dynamic checks are comfortable to see in one table. And since we had more than 30 ETLs with test result tables that basically needed to be checked in the same manner, the construction of UNION with self joins lost to the simplicity and readability of function in a procedure. Jenkins job run it regularly and the results were demonstrated on a Tableau dashboard.
+								</p>
+								<p>
+									<center><img src="images/Procedure_with_function.png" width="70%"></center>
+								</p>
+								<p align="justify" id="Used_commands">
+									ETLs specifics had me interact with different data storages - SQL, SQL-like, and NoSQL. Most of all I am experienced with PostgreSQL, Impala Queries, and Hive QL, but also I used MySQL, Oracle SQL, and MongoDB. I performed queries via terminals, database tools (DBeaver, Robo 3T), and Python scripts. 
+								</p>
+								<hr>
+								<p style="font-size:1.25em; ">
+									<b>In retrospect, I used the following commands and structures at various times</b>
+									<br>
+									<mark>&nbsp;DML: INSERT,UPDATE,DELETE&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;DDL: CREATE,DROP&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;String functions: CONCAT,LEFT/RIGHT,TRIM,REPLACE,UPPER/LOWER,SUNSTRING&nbsp;</mark>&nbsp; 
+									&nbsp;<mark>&nbsp;COALESCE&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;CASE&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;CAST&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;JOIN/LEFT JOIN/RIGHT JOIN/FULL JOIN&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;UNION&nbsp;</mark>&nbsp; 
+									&nbsp;<mark>&nbsp;LIKE&nbsp;</mark>&nbsp; &nbsp;<mark id="eventsQuery">&nbsp;Subqueries&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;EXISTS&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;HAVING&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;Window functions&nbsp;</mark>&nbsp; 
+									&nbsp;<mark>&nbsp;CTE&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;CREATE&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;VIEW&nbsp;</mark>&nbsp; &nbsp;<mark>&nbsp;Procedures&nbsp;</mark>
+								</p>
+								<hr>
+								<h2 id="Big_query">Big query</h2>
+								<p align="justify">
+										While practicing with <a href="https://cloud.google.com/bigquery/docs/introduction">Google BigQuery</a> I found the <b><a href="https://console.cloud.google.com/marketplace/product/the-gdelt-project/gdelt-2-events">GDELT 2.0 Event Database</a></b>. It has parsed and collected actions from different sources across the world. In particular, each event has a unique identifier, information about the active actor and the actor on which the action was performed, including affiliated countries. Events are classified with CAMEO action codes, that have three-level taxonomy, where the highest one consists of 20 types of events. The tone of the event is described from negative to positive in the range of (-100; +100), besides one can find the number of mentions of this event in all source documents. Also, there are such attributes as the date and location of the event, as well as the source reporting it. 
+								</p>
+								<p align="justify">
+									The main idea behind my queries was to collect aggregated metrics for each country. I chose the tone of an event, and the number of mentions and grouped them for each country by year and event code. I also added characteristics that might be interesting to consider such as population or area. Another metric I wanted to have is the number of events that happened within the country and the number of actions performed by citizens outside of the country.
+								</p>
+								<p align="justify">
+									Most of the attributes were retrieved from the main table <code>`gdelt-bq.full.events`</code>, for enrichment was also used the table with additional data about countries <code>`gdelt-bq.extra.countryinfo2`</code>. Inner and outer events were counted based on the comparison of whether the active actor country <code>Actor1CountryCode</code> matches the location of the event <code>ActionGeo_CountryCode</code>. They cannot be compared directly due to different code systems, but it was possible via an auxiliary table. The final query that was used can be seen below. The dataset that was formed with it can be found <a href="https://docs.google.com/spreadsheets/d/1gRLK1DAfyK3xMNEkn8lFpyRpcyZ9blJDSVryevPCMAc/edit?usp=sharing">here</a>.
+									<pre>
+										<code>
+SELECT
+  countries.country,                                         -- name of country affiliated with active actor
+  SUM(
+    CASE
+      WHEN events.ActionGeo_CountryCode = countries.fips     -- active actor country matches location of event
+      THEN 1
+    ELSE
+    0
+  END
+    ) AS InnerActions,
+  SUM(
+    CASE
+      WHEN events.ActionGeo_CountryCode &lt;&gt; countries.fips    -- active actor country does not match location of event
+      THEN 1
+    ELSE
+    0
+  END
+    ) AS OuterActions,
+  events.EventRootCode AS RootCode,                          -- event CAMEO action code of the highest level
+  events.Year,
+  MIN(events.AvgTone) AS MinTone,
+  AVG(events.AvgTone) AS AvgTone,
+  MAX(events.AvgTone) AS MaxTone,
+  MIN(events.NumMentions) AS MinMentions,
+  AVG(events.NumMentions) AS AvgMentions,
+  MAX(events.NumMentions) AS MaxMentions,
+  countries.area,
+  countries.population,
+  countries.languages,
+  countries.neighbours
+FROM
+  `gdelt-bq.full.events` events                             -- main table with all events
+JOIN
+  `gdelt-bq.extra.countryinfo2` countries                   -- auxiliary table with additional countries information
+ON
+  events.Actor1CountryCode = countries.iso3
+WHERE
+  events.Actor1CountryCode IS NOT NULL
+  AND events.ActionGeo_CountryCode IS NOT NULL
+  AND TRIM(events.EventRootCode) IN 
+  ('01','02','03','04','05','06','07','08','09','10',
+  '11','12','13','14','15','16','17','18','19','20')
+  AND events.Year > 2006
+GROUP BY
+  events.Actor1CountryCode,
+  countries.country,
+  events.EventRootCode,
+  events.Year,
+  countries.area,
+  countries.population,
+  countries.languages,
+  countries.neighbours;											
+										</code>
+									</pre>
+									The example of query results.
+									<div style="overflow-x:auto;">
+									  <table>
+										<tr>
+										  <th>country</th>
+										  <th>InnerActions</th>
+										  <th>OuterActions</th>
+										  <th>RootCode</th>
+										  <th>Year</th>
+										  <th>MinTone</th>
+										  <th>AvgTone</th>
+										  <th>MaxTone</th>
+										  <th>MinMentions</th>
+										  <th>AvgMentions</th>
+										  <th>MaxMentions</th>
+										  <th>area</th>	
+										  <th>population</th>
+										  <th>languages</th>
+										  <th>neighbours</th>
+										</tr>
+										<tr>
+										  <td>Micronesia</td>
+										  <td>1</td>
+										  <td>6</td>
+										  <td>11</td>
+										  <td>2022</td>
+										  <td>-5.21978022</td>
+										  <td>-4.291376442</td>
+										  <td>-3.655660377</td>
+										  <td>1</td>
+										  <td>4.857142857</td>
+										  <td>16</td>
+										  <td>702</td>	
+										  <td>107708</td>
+										  <td>en-FM,chk,pon,yap,kos,uli,woe,nkr,kpg</td>
+										  <td></td>
+										</tr>
+										<tr>
+										  <td>Nauru</td>
+										  <td>0</td>
+										  <td>2</td>
+										  <td>11</td>
+										  <td>2022</td>
+										  <td>-5.21978022</td>
+										  <td>-5.21978022</td>
+										  <td>-5.21978022</td>
+										  <td>2</td>
+										  <td>5</td>
+										  <td>8</td>
+										  <td>21</td>	
+										  <td>10065</td>
+										  <td>na,en-NR</td>
+										  <td></td>
+										</tr>
+										<tr>
+										  <td>Djibouti</td>
+										  <td>42</td>
+										  <td>42</td>
+										  <td>12</td>
+										  <td>2021</td>
+										  <td>-9.795017345</td>
+										  <td>-2.325545072</td>
+										  <td>5.72597137</td>
+										  <td>1</td>
+										  <td>5.511904762</td>
+										  <td>32</td>
+										  <td>23000</td>	
+										  <td>740528</td>
+										  <td>fr-DJ,ar,so-DJ,aa</td>
+										  <td>ER,ET,SO</td>	
+										</tr>
+									  </table>
+									</div>
+								</p>
+								<h2 id="Uni_project">University project</h2>
+								<p align="justify">
+									I was also using SQL a lot during my studies. At the Information and Communications Technologies for Development (ICT4D) course our team was developing a solution for citizen surveys in rural areas. The data was stored in a MySQL database on AWS. The tables that were created and their connections can be seen in the picture below. I found the developed data structure inconvenient for the results counting. It required a lot of JOINs and there were several people working on coding of fetching results to different sources so the likelihood of errors increased. Due to time constraints and the fact that part of the project was tied to the existing structure, I proposed and created VIEW. The query for it is in the picture below. It counted results and all code could now refer to one source with a simple SELECT statement. And for MVP required in the assignment, we didn't have to change the data schema. The project description can be found on <a href="https://github.com/alinaEfremova/ICT4D2021-RadioMaliVoterVoiceXML">Github</a>.
+								</p>	
+									<figure>
+										<center><img src="images/Initail_structure.png" width="90%"></center>
+										<figcaption><i>Examples of project tables with content and the data schema</i></figcaption>
+									</figure>
+									<br>
+									<br>
+									<figure>
+										<center><img src="images/After_VIEW.png" width="95%"></center>
+										<figcaption><i>The query and the result of the created VIEW</i></figcaption>
+									</figure>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="mailto:thealinaefremova@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
